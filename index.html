@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<div class="wrapper fade-in">
+<body>
+
+    <ul>
+        <li>
+            <a  href="home.html">Home</a>
+        </li>
+        <li>
+            <a class="active" href="index.html">Products</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li id="button">
+            <a type="button" id="btnBack" value="Toggle Background" />White Mode</a>
+        </li>
+    </ul>
+    <script>
+        var btnBack = document.getElementById('btnBack');
+        btnBack.addEventListener('click', function () {
+            document.body.classList.toggle('BgClass');
+        });
+    </script>
+
+
+
+    <div id="prvi">
+        <h1 id="crvena">The Gift Shop</h1>
+    </div>
+
+    <h3 id="crvena2">
+        <b>FIND NEAT GIFTS FOR EVERYONE</b>
+    </h3>
+
+    <div id="prvi"> 
+        <h2 id="zuta">Our Products</h2>
+    </div><br><br><br>
+    <br>
+
+    <div id="middle">
+        <a href="proizvod 1.html">
+            <img src="jedan.jpg" height="250" width="auto" id="prd1"></a>
+        <a href="proizvod 2.html">
+            <img src="dva.jpg" height="250" width="auto" id="prd1"></a>
+        <a href="proizvod 3.html">
+            <img src="tri.jpg" height="250" width="auto" id="prd1"></a>
+    </div>
+
+    <br><br><br>
+    
+    <div id="prvi">
+        <h2 id="plava">Our top selling products</h2>
+    </div>
+    <div id="middle2">
+        <a href="proizvod 4.html">
+            <img src="cetiri.jpg" height="250" width="auto" id="prd1"></a>
+        <a href="proizvod 5.html">
+            <img src="pet.jpg" height="250" width="auto" id="prd1"></a>
+        <a href="proizvod 6.html">
+            <img src="sest.jpg" height="250" width="auto" id="prd1"></a>
+    </div>
+</body>
+</div>
+</html>

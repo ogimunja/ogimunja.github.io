@@ -1,0 +1,136 @@
+html, body {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.BgClass {
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 30px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+li a:hover:not(.active) {
+  background-color: #838383;
+}
+
+.active {
+  background-color: #838383;
+}
+
+.logod {
+  margin: 150px;
+  text-align: center;
+}
+.circle {
+  text-align: right;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+}
+
+tr {
+  background-color: aliceblue;
+}
+
+th {
+  background-color: rgb(4, 88, 109);
+  color: white;
+}
+
+
+@keyframes fadeIn to {
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fadeIn 1.0s ease forwards;
+  [other div properties can be included here]
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}

@@ -1,0 +1,278 @@
+html,
+body {
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url("wallpaper.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.BgClass {
+  background-image: url('wallpaper2.jpg');
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+
+li {
+  float: left;
+  padding: 5px;
+}
+
+#button {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+li a:hover:not(.active) {
+  background-color: #838383;
+}
+
+.active {
+  background-color: #838383;
+}
+
+#prvi {
+  display: flex;
+}
+
+#crvena {
+  width: 960px;
+  margin: 1px auto;
+  margin-top: 10px;
+  text-align: center;
+  background: rgb(161, 161, 161);
+  padding: 20px 10px;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  animation: myanimation 10s infinite;
+}
+
+@keyframes myanimation {
+  0% {
+    background-color: rgb(172, 245, 88);;
+  }
+
+  25% {
+    background-color: rgb(74, 117, 236);
+  }
+
+  50% {
+    background-color: rgb(240, 74, 74);
+  }
+
+  75% {
+    background-color: rgb(104, 57, 105);
+  }
+
+  100% {
+    background-color: rgb(93, 236, 236);
+  }
+}
+
+#crvena2 {
+  width: 350px;
+  margin: 1em auto;
+  text-align: center;
+  background: rgb(161, 161, 161);
+  padding: 20px 10px;
+  color: white;
+  border-radius: 30px;
+  background-color: rgb(43, 43, 43);
+  position: relative;
+  -webkit-animation-name: example;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 20s;
+  /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes example {
+  0% {
+    background-color: rgb(172, 245, 88);
+    left: -300px;
+    top: 0px;
+  }
+
+  25% {
+    background-color: rgb(74, 117, 236);
+    left: 300px;
+    top: 0px;
+  }
+
+  50% {
+    background-color: rgb(240, 74, 74);
+    left: -300px;
+    top: 0px;
+  }
+
+  75% {
+    background-color: rgb(104, 57, 105);
+    left: 300px;
+    top: 0px;
+  }
+
+  100% {
+    background-color: rgb(93, 236, 236);
+    left: -300px;
+    top: 0px;
+  }
+}
+
+#siva {
+  width: 800px;
+  margin: 1em auto;
+  text-align: center;
+  background: rgb(53, 53, 53);
+  padding: 20px 10px;
+  color: white;
+  border-radius: 30px;
+}
+
+#zuta {
+  width: 800px;
+  margin: 10px auto;
+
+  text-align: center;
+  background: rgb(121, 121, 121);
+  padding: 20px 10px;
+  color: white;
+  border-radius: 30px;
+  animation: myanimation 10s infinite;
+}
+
+#plava {
+  width: 800px;
+  margin: 1em auto;
+  text-align: center;
+  background: rgb(65, 65, 65);
+  padding: 20px 10px;
+  color: white;
+  border-radius: 30px;
+  animation: myanimation 10s infinite;
+}
+
+#prd1 {
+  margin: 10px;
+  border: 10px solid rgba(170, 162, 162, 0.603);
+}
+
+#middle {
+  text-align: center;
+}
+
+#middle2 {
+  opacity: 0.9;
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+}
+
+tr {
+  background-color: aliceblue;
+}
+
+th {
+  background-color: rgb(4, 88, 109);
+  color: white;
+}
+
+
+@keyframes fadeIn to {
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fadeIn 1.0s ease forwards;
+  [other div properties can be included here]
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}

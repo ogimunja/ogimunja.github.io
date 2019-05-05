@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="still.css">
+</head>
+<div class="wrapper fade-in">
+
+    <body onload="typeWriter()">
+
+        <ul>
+            <li>
+                <a href="home.html">Home</a>
+            </li>
+            <li>
+                <a href="index.html">Products</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+            <li>
+                <a class="active" href="about.html">About</a>
+            </li>
+            <li id="button">
+                <a type="button" id="btnBack" value="Toggle Background" />White Mode</a>
+            </li>
+        </ul>
+        <script>
+            var btnBack = document.getElementById('btnBack');
+            btnBack.addEventListener('click', function () {
+                document.body.classList.toggle('BgClass');
+            });
+        </script>
+        <div id="prd2">
+
+            <script>
+                // set up text to print, each item in array is new line
+                var aText = new Array(
+                    "There are only 10 types of people in the world:",
+                    "Those who understand binary, and those who don't"
+                );
+                var iSpeed = 100; // time delay of print out
+                var iIndex = 0; // start printing array at this posision
+                var iArrLength = aText[0].length; // the length of the text array
+                var iScrollAt = 20; // start scrolling up at this many lines
+
+                var iTextPos = 0; // initialise text position
+                var sContents = ''; // initialise contents variable
+                var iRow; // initialise current row
+
+                function typewriter() {
+                    sContents = ' ';
+                    iRow = Math.max(0, iIndex - iScrollAt);
+                    var destination = document.getElementById("typedtext");
+
+                    while (iRow < iIndex) {
+                        sContents += aText[iRow++] + '<br />';
+                    }
+                    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+                    if (iTextPos++ == iArrLength) {
+                        iTextPos = 0;
+                        iIndex++;
+                        if (iIndex != aText.length) {
+                            iArrLength = aText[iIndex].length;
+                            setTimeout("typewriter()", 500);
+                        }
+                    } else {
+                        setTimeout("typewriter()", iSpeed);
+                    }
+                }
+
+
+                typewriter();
+
+            </script>
+    </body>
+</div>
