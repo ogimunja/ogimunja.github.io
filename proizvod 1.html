@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <link rel="stylesheet" href="stil3.css">
+    <link rel="stylesheet" href="CSS/stil3.css">
     <link rel="icon" type="image/png" href="Logo/logo2.png">
 </head>
 
@@ -100,17 +100,17 @@
     <!-- Skripta za formu -->
     <script>
 
-        // Get the modal
+        // Uzmi bar
         var modal = document.getElementById('myModal');
 
-        // Get the button that opens the modal
+        // Uzme dugme za bar
         var btn = document.getElementById("myBtn");
 
-        // Get the <span> element that closes the modal
+        // Uzmi <span> element koji zatvara bar 
         var span = document.getElementsByClassName("close")[0];
 
 
-        // When the user clicks the button, open the modal 
+        // Kad se klikne dugme otvori bar  
         btn.onclick = function () {
             modal.style.display = "block";
 
@@ -122,12 +122,12 @@
             console.log(selectedValue);
 
 
-            // When the user clicks on <span> (x), close the modal
+            // Iskljucivanje bara na klick <span>
             span.onclick = function () {
                 modal.style.display = "none";
             }
 
-            // When the user clicks anywhere outside of the modal, close it
+            // Zatvaranjem klikom bilo gde 
             window.onclick = function (event) {
                 if (event.target == modal) {
                     modal.style.display = "none";

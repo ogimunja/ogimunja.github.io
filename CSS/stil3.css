@@ -1,11 +1,10 @@
-body {
-  font-family: sans-serif;
-}
+
 body {
   background-image: url("Slike/wallpaper.jpg");
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .BgClass {
