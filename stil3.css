@@ -2,14 +2,14 @@ body {
   font-family: sans-serif;
 }
 body {
-  background-image: url("wallpaper.jpg");
+  background-image: url("Slike/wallpaper.jpg");
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
 }
 
 .BgClass {
-  background-image: url('wallpaper2.jpg');
+  background-image: url('Slike/wallpaper2.jpg');
 }
 
 ul {
@@ -65,7 +65,8 @@ li a:hover:not(.active) {
 .slika {flex: 1;
 order: 1;}
 .opis {
-  padding: 30px;
+  padding-bottom: 60px;
+  padding-left: 24px;
   margin-left: 0px;
   flex: 1;
   order: 2;

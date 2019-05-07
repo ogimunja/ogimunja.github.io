@@ -4,14 +4,14 @@ body {
 }
 
 body {
-  background-image: url("wallpaper.jpg");
+  background-image: url("Slike/wallpaper.jpg");
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
 }
 
 .BgClass {
-  background-image: url('wallpaper2.jpg');
+  background-image: url('Slike/wallpaper2.jpg');
 }
 
 ul {

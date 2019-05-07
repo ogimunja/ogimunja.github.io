@@ -1,11 +1,8 @@
-html, body {
-  font-family: sans-serif;
-}
-
 body {
   background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: sans-serif;
 }
 .BgClass {
   background-color: white;
@@ -80,7 +77,6 @@ th {
 
 .fade-in {
   animation: fadeIn 1.0s ease forwards;
-  [other div properties can be included here]
 }
 
 @keyframes fadeIn{

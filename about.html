@@ -10,7 +10,7 @@
 <div class="wrapper fade-in">
 
     <body>
-
+ <!-- Navigacioni Bar -->
         <ul>
             <li>
                 <a href="index.html">Home</a>
@@ -28,28 +28,25 @@
                 <a type="button" id="btnBack" value="Toggle Background">Background</a>
             </li>
         </ul>
-        <script>
-            var btnBack = document.getElementById('btnBack');
-            btnBack.addEventListener('click', function () {
-                document.body.classList.toggle('BgClass');
-            });
-        </script>
+       
 
         <div id="typedtext"></div>
-        <Script>// set up text to print, each item in array is new line
-            var aText = new Array(
-                "Hi everytone,my name is Ognjen Mirkovic",
-                "This is my school project for Javascript",
-                "The theme is a website for a gift shop,i hope you like it."
-            );
-            var iSpeed = 150; // time delay of print out
-            var iIndex = 0; // start printing array at this posision
-            var iArrLength = aText[0].length; // the length of the text array
-            var iScrollAt = 20; // start scrolling up at this many lines
+        <Script>// postavite tekst za štampanje, svaka stavka u nizu je nova linija
 
-            var iTextPos = 0; // initialise text position
-            var sContents = ''; // initialise contents variable
-            var iRow; // initialise current row
+            var aText = new Array(
+                "Hi, my name is Ognjen",
+                "This is my school project for Javascript",
+                "The theme is a website for a gift shop, i hope you like it."
+            );
+            var iSpeed = 150; // vremensko odlaganje štampanja
+            var iIndex = 0; // započinje štampanje polja u ovoj poziciji
+            var iArrLength = aText[0].length; // dužina tekstualnog niza
+ 
+            var iScrollAt = 20; // počinje da se pomera na ovim linijama
+
+            var iTextPos = 0; // inicijalizuje poziciju teksta
+            var sContents = ''; // inicijalizuje promenljivu sadržaja
+            var iRow; // inicijalizuje trenutni red
 
             function typewriter() {
                 sContents = ' ';
@@ -73,7 +70,15 @@
             }
 
 
-            typewriter();</Script>
+            typewriter();
+            </Script>
+             <!-- Skripta za pozadinu -->
+             <script>
+                var btnBack = document.getElementById('btnBack');
+                btnBack.addEventListener('click', function () {
+                    document.body.classList.toggle('BgClass');
+                });
+            </script>
     </body>
 </div>
 

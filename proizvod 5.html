@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+    <!-- Navigacioni Bar -->
     <ul>
         <li>
             <a href="index.html">Home</a>
@@ -24,24 +24,16 @@
             <a href="#about">About</a>
         </li>
         <li id="button">
-            <a type="button" id="btnBack" value="Toggle Background" >Background</a>
+            <a type="button" id="btnBack" value="Toggle Background">Background</a>
         </li>
     </ul>
-    <script>
-        var btnBack = document.getElementById('btnBack');
-        btnBack.addEventListener('click', function () {
-            document.body.classList.toggle('BgClass');
-        });
-    </script>
+    <!-- Slika proizvoda -->
     <div class="skup">
         <div class="slika">
-            <img src="pet.jpg" height="150" width="auto" class="slika3">
+            <img src="Slike/pet.jpg" height="150" width="auto" class="slika3">
         </div>
-
-        <div class="opis" style="
-    margin-left: 10px;
-    margin-right: 10px;
-    ">
+        <!-- Tekst proizvoda -->
+        <div class="opis">
             <div class="oskup">
                 <h1>Baby Groot Pot</h1>
                 <p>Inventory: In Stock</p>
@@ -58,22 +50,30 @@
                         affect the appearance
                     </li>
                 </ul>
-
+                <!-- Forma sa adresama -->
                 <p class="cena">PRICE : 700 RSD</p>
                 <h1>Purchase at this store :<form>
-                    <select name="Radnje" id="list">
-                        <option value="+381/654-42-36">Bulevar cara Lazara 8,Novi Sad</option>
-                        <option value="+382/445-69-63">Bulevar Mihajla Pupina 4,Beograd</option>
-                        <option value="+383/589-89-68">Cara Dusana 14,Zrenjanin </option>
-                    </select>
-            
-                    <button type="button" value="Check Avalibilty" onclick="getSelectValue()">Check
-                        Avalibilty</button>
-                </form>
+                        <select name="Radnje" id="list">
+                            <option value="+381/654-42-36">Bulevar cara Lazara 8,Novi Sad</option>
+                            <option value="+382/445-69-63">Bulevar Mihajla Pupina 4,Beograd</option>
+                            <option value="+383/589-89-68">Cara Dusana 14,Zrenjanin </option>
+                        </select>
+
+                        <button type="button" value="Check Avalibilty" onclick="getSelectValue()">Check
+                            Avalibilty</button>
+                    </form>
                 </h1>
             </div>
         </div>
     </div>
+    <!-- Skripta za pozadinu -->
+    <script>
+        var btnBack = document.getElementById('btnBack');
+        btnBack.addEventListener('click', function () {
+            document.body.classList.toggle('BgClass');
+        });
+    </script>
+    <!-- Skripta za formu -->
     <script>
         function getSelectValue() {
             var selectedValue = document.getElementById("list").value;
@@ -81,4 +81,5 @@
         }
     </script>
 </body>
+
 </html>
