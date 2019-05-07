@@ -5,9 +5,8 @@ body {
   font-family: sans-serif;
 }
 .BgClass {
-  background-color: white;
+  background-image: url('Slike/wallpaper2.jpg');
 }
-
 ul {
   list-style-type: none;
   margin: 0;

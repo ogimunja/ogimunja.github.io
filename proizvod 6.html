@@ -10,7 +10,7 @@
 </head>
 
 <body>
- <!-- Navigacioni Bar -->
+    <!-- Navigacioni Bar -->
     <ul>
         <li>
             <a href="index.html">Home</a>
@@ -25,17 +25,17 @@
             <a href="about.html">About</a>
         </li>
         <li id="button">
-            <a type="button" id="btnBack" value="Toggle Background" >Background</a>
+            <a type="button" id="btnBack" value="Toggle Background">Background</a>
         </li>
     </ul>
-      <!-- Slika proizvoda -->
-   
+    <!-- Slika proizvoda -->
+
     <div class="skup">
         <div class="slika">
             <img src="Slike/sest.jpg" height="150" width="auto" class="slika3">
         </div>
-<!-- Tekst proizvoda -->
-        <div class="opis" >
+        <!-- Tekst proizvoda -->
+        <div class="opis">
             <div class="oskup">
                 <h1>Himalayan Salt Lamp</h1>
                 <p>Inventory: In Stock</p>
@@ -52,94 +52,94 @@
                         shape.</li>
                 </ul>
                 <p class="cena">PRICE : 4056 RSD</p>
-               <!-- Forma sa adresama -->
-               <h1>Purchase at this store :<form>
-                    <select name="Radnje" id="list">
-                        <option value="+381/757-35-44 Novi Sad">Bulevar cara Lazara 8,Novi Sad</option>
-                        <option value="+382/122-22-99 Beograd">Bulevar Mihajla Pupina 4,Beograd</option>
-                        <option value="+383/645-89-88 Zrenjanin">Cara Dusana 14,Zrenjanin </option>
-                    </select>
+                <!-- Forma sa adresama -->
+                <h1>Purchase at this store :<form>
+                        <select name="Radnje" id="list">
+                            <option value="+381/757-35-44 Novi Sad">Bulevar cara Lazara 8,Novi Sad</option>
+                            <option value="+382/122-22-99 Beograd">Bulevar Mihajla Pupina 4,Beograd</option>
+                            <option value="+383/645-89-88 Zrenjanin">Cara Dusana 14,Zrenjanin </option>
+                        </select>
 
-                    <button id="myBtn" onclick="odabranavrednost()" type="button">Check
-                        Avalibilty</button>
-                </form>
-            </h1><br><br><br>
+                        <button id="myBtn" onclick="odabranavrednost()" type="button">Check
+                            Avalibilty</button>
+                    </form>
+                </h1><br><br><br>
 
 
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Please call this number to check</h2>
+            </div>
+            <div id="broj" class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <h3>Thank you,and have a nice day!</h3>
+            </div>
         </div>
 
     </div>
 
+    <script>
 
-</div>
-<!-- Modal -->
-<div id="myModal" class="modal">
+    </script>
 
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2>Please call this number to check</h2>
-        </div>
-        <div id="broj" class="modal-body">
-        </div>
-        <div class="modal-footer">
-            <h3>Thank you,and have a nice day!</h3>
-        </div>
-    </div>
+    <!-- Skripta za formu -->
+    <script>
 
-</div>
+        // Uzmi bar
+        var modal = document.getElementById('myModal');
 
-<script>
+        // Uzme dugme za bar
+        var btn = document.getElementById("myBtn");
 
-</script>
-
-<!-- Skripta za formu -->
-<script>
-
-    // Get the modal
-    var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+        // Uzmi <span> element koji zatvara bar 
+        var span = document.getElementsByClassName("close")[0];
 
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-        modal.style.display = "block";
+        // Kad se klikne dugme otvori bar  
+        btn.onclick = function () {
+            modal.style.display = "block";
 
-        var selectedValue = document.getElementById("list").value;
-        var broj = document.getElementById("broj");
-        var brojup = document.createElement("p");
-        brojup.innerHTML = selectedValue;
-        broj.appendChild(brojup);
-        console.log(selectedValue);
+            var selectedValue = document.getElementById("list").value;
+            var broj = document.getElementById("broj");
+            var brojup = document.createElement("p");
+            brojup.innerHTML = selectedValue;
+            broj.appendChild(brojup);
+            console.log(selectedValue);
 
 
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
+            // Iskljucivanje bara na klick <span> 
+            span.onclick = function () {
                 modal.style.display = "none";
             }
-        }
-    }
 
-</script>
-<!-- Skripta za pozadinu -->
-<script>
-    var btnBack = document.getElementById('btnBack');
-    btnBack.addEventListener('click', function () {
-        document.body.classList.toggle('BgClass');
-    });
-</script>
+            // Zatvaranjem klikom bilo gde 
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
+    </script>
+    <!-- Skripta za pozadinu -->
+    <script>
+        var btnBack = document.getElementById('btnBack');
+        btnBack.addEventListener('click', function () {
+            document.body.classList.toggle('BgClass');
+        });
+    </script>
 </body>
 
 </html>
