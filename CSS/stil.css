@@ -81,7 +81,7 @@ th {
 
 .fade-in {
   animation: fadeIn 1.0s ease forwards;
-  [other div properties can be included here]
+
 }
 
 @keyframes fadeIn{

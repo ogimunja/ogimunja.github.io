@@ -87,7 +87,7 @@ order: 1;}
   float: right;
 }
 
-/* The Modal (background) */
+/* bar*/
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -105,7 +105,7 @@ order: 1;}
   animation-duration: 0.4s
 }
 
-/* Modal Content */
+/* bar Content */
 .modal-content {
   position: fixed;
   bottom: 0;
@@ -117,7 +117,7 @@ order: 1;}
   animation-duration: 0.4s
 }
 
-/* The Close Button */
+/* bar Button */
 .close {
   color: white;
   float: right;
@@ -151,7 +151,7 @@ order: 1;}
   color: white;
 }
 
-/* Add Animation */
+/* Animation */
 @-webkit-keyframes slideIn {
   from {bottom: -300px; opacity: 0} 
   to {bottom: 0; opacity: 1}
