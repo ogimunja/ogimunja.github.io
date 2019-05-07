@@ -8,6 +8,10 @@ body {
   background-attachment: fixed;
 }
 
+.BgClass {
+  background-image: url('wallpaper2.jpg');
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -83,3 +87,6 @@ order: 1;}
     position: relative;
 }
 
+#button {
+  float: right;
+}

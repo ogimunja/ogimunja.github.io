@@ -5,27 +5,27 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-    <link rel="stylesheet" href="still.css">
+    <link rel="stylesheet" href="stil4.css">
 </head>
 <div class="wrapper fade-in">
 
-    <body onload="typeWriter()">
+    <body>
 
         <ul>
             <li>
-                <a href="home.html">Home</a>
+                <a href="index.html">Home</a>
             </li>
             <li>
-                <a href="index.html">Products</a>
+                <a href="products.html">Products</a>
             </li>
             <li>
-                <a href="#contact">Contact</a>
+                <a href="contact.html">Contact</a>
             </li>
             <li>
                 <a class="active" href="about.html">About</a>
             </li>
             <li id="button">
-                <a type="button" id="btnBack" value="Toggle Background" />White Mode</a>
+                <a type="button" id="btnBack" value="Toggle Background">Background</a>
             </li>
         </ul>
         <script>
@@ -34,26 +34,47 @@
                 document.body.classList.toggle('BgClass');
             });
         </script>
-    
-            <div id="prd2">
-    
-                <script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
-                <script>
-                    var prd2 = document.getElementById('prd2');
-    
-                    var typewriter = new Typewriter(prd2, {
-                        loop: false
-                    });
-    
-                    typewriter.typeString('Cao svima')
-                        .pauseFor(1000)
-                        .deleteAll()
-                        .typeString('Moje ime je Ognjen Mirkovic')
-                        .pauseFor(1000)
-                        .deleteAll()
-                        .typeString('I ovo je moj zavrsni projekat za Javascript')
-                        .pauseFor(1000)
-                        .start();
-                </script>
-        </body>
-    </div>
+
+        <div id="typedtext"></div>
+        <Script>// set up text to print, each item in array is new line
+            var aText = new Array(
+                "Hi everytone,my name is Ognjen Mirkovic",
+                "This is my school project for Javascript",
+                "The theme is a website for a gift shop,i hope you like it."
+            );
+            var iSpeed = 150; // time delay of print out
+            var iIndex = 0; // start printing array at this posision
+            var iArrLength = aText[0].length; // the length of the text array
+            var iScrollAt = 20; // start scrolling up at this many lines
+
+            var iTextPos = 0; // initialise text position
+            var sContents = ''; // initialise contents variable
+            var iRow; // initialise current row
+
+            function typewriter() {
+                sContents = ' ';
+                iRow = Math.max(0, iIndex - iScrollAt);
+                var destination = document.getElementById("typedtext");
+
+                while (iRow < iIndex) {
+                    sContents += aText[iRow++] + '<br />';
+                }
+                destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+                if (iTextPos++ == iArrLength) {
+                    iTextPos = 0;
+                    iIndex++;
+                    if (iIndex != aText.length) {
+                        iArrLength = aText[iIndex].length;
+                        setTimeout("typewriter()", 500);
+                    }
+                } else {
+                    setTimeout("typewriter()", iSpeed);
+                }
+            }
+
+
+            typewriter();</Script>
+    </body>
+</div>
+
+</html>

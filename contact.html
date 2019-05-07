@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="stil2.css">
+</head>
+<div class="wrapper fade-in">
+
+    <body>
+
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="products.html">Products</a>
+            </li>
+            <li>
+                <a class="active" href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li id="button">
+                <a type="button" id="btnBack" value="Toggle Background">Background</a>
+            </li>
+        </ul>
+
+        <script>
+            var btnBack = document.getElementById('btnBack');
+            btnBack.addEventListener('click', function () {
+                document.body.classList.toggle('BgClass');
+            });
+        </script>
+        <br>
+        <div id="div5">
+            <img id="contactb" src="Logo/contactb.png" height="150" width="auto" onclick="kontakt()" id="dug">
+
+            </button></div>
+
+        <script>
+
+            function kontakt() {
+                var omotac4 = document.getElementById('div5');
+                var tabela = document.createElement('table');
+                omotac4.appendChild(tabela);
+                var tr = document.createElement("tr");
+                tr.innerHTML = "";
+                tabela.appendChild(tr);
+
+                var td1 = document.createElement("td");
+                td1.innerHTML = "Agency Name:";
+                tabela.appendChild(td1);
+
+                var td2 = document.createElement("td");
+                td2.innerHTML = "The Gift Shop";
+                tabela.appendChild(td2);
+
+                var tr2 = document.createElement("tr");
+                tr2.innerHTML = "";
+                tabela.appendChild(tr2);
+
+                var td11 = document.createElement("td");
+                td11.innerHTML = "Address:";
+                tabela.appendChild(td11);
+
+                var td22 = document.createElement("td");
+                td22.innerHTML = "Bulevar Mihajla Pupina 4, Beograd";
+                tabela.appendChild(td22);
+
+                var tr3 = document.createElement("tr");
+                tr3.innerHTML = "";
+                tabela.appendChild(tr3);
+
+                var td111 = document.createElement("td");
+                td111.innerHTML = "Phone Number:";
+                tabela.appendChild(td111);
+
+                var td222 = document.createElement("td");
+                td222.innerHTML = "382/445-69-63";
+                tabela.appendChild(td222);
+
+                var forma = document.createElement("form");
+                forma.innerHTML = "Your name:";
+                var input = document.createElement("input");
+                input.setAttribute("id", "Forma");
+                input.setAttribute("type", "text");
+                omotac4.appendChild(forma);
+                omotac4.appendChild(input);
+
+                var forma2 = document.createElement("form");
+                forma2.innerHTML = "Contact email:";
+                var input2 = document.createElement("input");
+                input2.setAttribute("id", "Forma2");
+                input2.setAttribute("type", "text");
+                omotac4.appendChild(forma2);
+                omotac4.appendChild(input2);
+
+                var br = document.createElement("br");
+                omotac4.appendChild(br);
+
+                var forma3 = document.createElement("form");
+                forma3.innerHTML = "Your message:";
+                var input3 = document.createElement("input");
+                input3.setAttribute("id", "Forma5");
+                input3.setAttribute("style", "height: 85px;");
+                input3.setAttribute("type", "text");
+                omotac4.appendChild(forma3);
+                omotac4.appendChild(input3);
+
+                var br = document.createElement("br");
+                omotac4.appendChild(br);
+
+                var dugme3 = document.createElement("button");
+                input3.setAttribute("id", "Forma3");
+                dugme3.innerHTML = "Posalji";
+                omotac4.appendChild(dugme3);
+
+                document.getElementById("contactb").style.display = 'none';
+
+            }
+
+
+
+        </script>
+    </body>
+</div>

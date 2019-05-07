@@ -12,18 +12,27 @@
 
     <ul>
         <li>
-            <a href="home.html">Home</a>
+            <a href="index.html">Home</a>
         </li>
         <li>
-            <a href="index.html">Products</a>
+            <a href="products.html">Products</a>
         </li>
         <li>
-            <a href="#contact">Contact</a>
+            <a href="contact.html">Contact</a>
         </li>
         <li>
-            <a href="#about">About</a>
+            <a href="about.html">About</a>
+        </li>
+        <li id="button">
+            <a type="button" id="btnBack" value="Toggle Background" >Background</a>
         </li>
     </ul>
+    <script>
+        var btnBack = document.getElementById('btnBack');
+        btnBack.addEventListener('click', function () {
+            document.body.classList.toggle('BgClass');
+        });
+    </script>
     <div class="skup">
         <div class="slika">
             <img src="sest.jpg" height="150" width="auto" class="slika3">
@@ -60,14 +69,23 @@
 
                 <br>
                 <h1>Purchase at this store :<form>
-                        <select name="Radnje">
-                            <option value="Nemanjina">Nemanjina 17</option>
-                            <option value="Takovska">Takovska 3</option>
-                            <option value="Stepina">Stepina 3</option>
+                        <select name="Radnje" id="list">
+                            <option value="+3816544236">Bulevar cara Lazara 8,Novi Sad</option>
+                            <option value="+3824456963">Bulevar Mihajla Pupina 4,Beograd</option>
+                            <option value="+3834458968">Cara Dusana 14,Zrenjanin </option>
                         </select>
 
-                        <input type="submit" value="Call">
+                        <button type="button" value="Check Avalibilty" onclick="getSelectValue()">Check Avalibilty</button>
                     </form>
                 </h1>
             </div>
         </div>
+    </div>
+    <script>
+        function getSelectValue() {
+            var selectedValue = document.getElementById("list").value;
+            alert(selectedValue);
+        }
+    </script>
+</body>
+</html>
